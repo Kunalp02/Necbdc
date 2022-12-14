@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<link rel="stylesheet" href="{% static 'css\style.css' %}">
+<style>
+.head{
+    height: 50vh;
+    background-image: radial-gradient(
+                rgba(171, 255, 61, 0.37),
+                rgba(36, 36, 36, 0.849)), url('{% static 'images\main.jpg' %}');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (min-width: 700px) {
+    .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url('{% static 'images\main.jpg' %}');
+                  background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url('{% static 'images\main.jpg' %}');
+        background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    }
+
+}
+
+
+@media screen and (min-width: 700px) {
+    .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url('{% static 'images\main.jpg' %}');
+        background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    } 
+
+</style>
+<div class="head">
+    <nav>
+        <ul>
+            <li> <a href="#">Home</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="{% url 'blog' %}">Blogs</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logOut' %}">Log out</a></li>
+            {% else %}
+            <li><a href="{% url 'loginUser' %}">Login</a></li>
+            <li><a href="{% url 'signupUser' %}">Register</a></li>
+            {% endif %}
+            <li> <a href="#">About CBTC</a></li>
+            <li><a href="#">Contact Us</a></li>
+            {% if user.is_authenticated %}
+            <li style=""><a href="#">Welcome {{user.first_name}}!</a></li>
+            {% else %}
+            <li style=""><a href="#">Welcome Guest</a></li>
+            {% endif %}
+
+        </ul>
+        <input type="text" placeholder="Search"> <button>Go</button>
+
+    </nav>
+    <div class="headtext">
+        <p>
+        <h1>NORTH EAST CANE BAMBOO DEVELOPMENT COUNCIL</h1>
+        <h4>UNDER NORTH EASTERN COUNCIL,MINISTRY OF DONER</h4>
+        </p>
+    </div>
+
+
+</div>
+
+
+{% block content %}
+
+{% endblock content %}
+
+
+
+
+
+<div class="footer">
+    <h2>Contact</h2>
+    <p>North East Cane and Bamboo Develepment Council <br>NECBDC</p>
+    <address>13th Mile, G.S Road, Burnihat 781023 Assam</address>
+    <p> Email: <a href="cbtcassam@gmail.com">cbtcassam@gmail.com</a></p>
+</div>
+
+
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'>    
+</script><script  src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
+

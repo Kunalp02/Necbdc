@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cabin,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0em;
+}
+
+.head{
+    height: 50vh;
+    background-image: radial-gradient(
+              rgba(171, 255, 61, 0.37),
+              rgba(36, 36, 36, 0.849)), url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+body{
+    font: sans-serif;
+}
+
+
+background-image{
+    opacity: 0.5;
+}
+
+.head nav ul li {
+    display: inline;
+
+}
+.head nav{
+    padding-top: 10px;
+}
+.head nav ul li a{
+    color: rgb(255, 255, 255);
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+}
+.headtext {
+    margin: 90px 90px;
+    text-align: center;
+}
+.headtext  h1,h4{
+    color: white;
+}
+.head nav input{
+    display: inline-block;
+    border-radius: 4px;
+
+}
+.head nav input{
+    width: 100px;
+}
+.head nav ul{
+    display: inline;
+}
+.head nav input,button{
+position: absolute;
+right: 60px;
+}
+.head nav ul li a:hover{
+    color: rgb(1, 29, 241);
+}
+
+/* box1 */
+marquee{
+    margin-top: 30px;
+    color: Green;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+}
+.box1{
+    width: 50vw;
+    border: 2px solid green;
+    padding: 10px;
+    margin-top: 20px;
+}
+.box2{
+    margin-top: 20px;
+    height: 33vh;
+    width: 40vw;
+    border: 2px solid green;
+
+}
+
+.box1 h4{
+    color: black;
+    text-align: center;
+}
+/* slider */
+.slider .row{
+    display: flex;
+}
+/* features */
+
+.features{
+    display: flex;
+    width: 90vw;
+    height: 45vh;
+    border: 2px solid green;
+    margin: auto;
+    margin-top: 25px;
+    justify-content: space-around;
+    align-items: center;
+  
+    
+}
+
+
+.features p{
+    text-align: center;
+    font-weight: bolder;
+    
+}
+.footer{
+    margin-top: 23px;
+    height: 20vh;
+    background:radial-gradient(rgb(118, 214, 118),white);
+    text-align: center;
+    padding: 50px;
+}
+
+
+/* News */
+.news{
+    max-width: 80%;
+    height: 100vh;
+    border: 2px solid green;
+    margin: 5px auto;
+    display: block;
+
+}
+.col4{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.box-news{
+    width: 250px;
+    height: 100%;
+    border: 2px solid green;
+    margin-bottom: 20px;
+}
+.box-news p{
+    padding: 15px;
+}
+.sidenewsbar{
+    display: inline-block;
+    height: 100vh;
+    width: 10vw;
+    border: 1px solid black;
+}
+#newshead{
+    color: green;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+
+.post-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.post-container {
+    padding: 2px 16px;
+}
+
+.post-container image{
+    width: 200px;
+    height: 200px;
+
+}
+
+.badge-light {
+    margin-top: 2.5em;
+}
+.errorlist {
+    list-style: none;
+    padding-left: 0px;
+    opacity: 0.8;
+    color: #dc3545;
+    font-size: 12px;
+}
+.msg {
+    margin: 0 !important;
+    margin-bottom: 4px !important;
+    margin-top: 4px !important;
+}
+.messages {
+    z-index: 100;
+    position: fixed;
+    right: 2em;
+    margin-top: -1em;
+    list-style: none;
+    text-align: right;
+}
+.alert {
+    margin-top: 1rem;
+}
+.alert-error {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 700px) {
+     .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url();
+        background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    } 
+
+
+
+}
+
+
+
+@media screen and (min-width: 700px) {
+   .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url('istockphoto-534456534-170667a.jpg');
+        background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    } 
+
+}
+
+
+@media screen and (min-width: 700px) {
+    .head{
+        height: 45vh;
+        background-image: radial-gradient(
+                  rgba(171, 255, 61, 0.37),
+                  rgba(36, 36, 36, 0.849)), url('istockphoto-534456534-170667a.jpg');
+        background-repeat: repeat;
+        background-size: contain;
+        font-weight: bolder;
+        text-shadow: 2px 2px #000000;
+    } 
+
+}
+
+

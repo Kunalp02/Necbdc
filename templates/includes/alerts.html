@@ -1,0 +1,27 @@
+{% comment %} {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %} {% endcomment %}
+
+
+
+        <ul class="messages" id="messages-list">
+        {% if messages %}
+            {% for message in messages %}
+            <li>
+                {% if message.tags %}
+                     <div class="alert alert-{{ message.tags }} msg fade show" role="alert">{{ message }}</div>
+                {% else %}
+                    <div class="alert alert-info msg fade show" role="alert">{{ message }}</div>
+                {% endif %}
+            </li>
+            {% endfor %}
+        {% endif %}
+        </ul>
+

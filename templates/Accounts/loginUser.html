@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Doc</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">Signup to your account</h2>
+    {% include 'includes/alerts.html' %}
+    <form action="{% url 'loginUser' %}" method='POST' id="formvalidate">
+      {% csrf_token %}
+      <table class="table-register">
+      <tr>    
+        <td>
+          <div class="input-group">
+            <input class="form-control" name="email" id="userName" type="email" placeholder="email" />
+            <span class="lighting"></span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="input-group">
+            <input class="form-control" name="password" id="userPassword" type="password" placeholder="password" />
+            <span class="lighting"></span>
+          </div>
+        </td> 
+      </tr>
+      <tr>
+        <td>
+          <button type="submit" class="register-button" id="login">Login as User</button>
+          <button type="submit" class="register-button" id="login">Login as Exporter</button>
+        </td>
+      </tr>
+    </table>
+
+      <div class="clearfix supporter">
+        <div class="pull-left remember-me">
+          <input id="rememberMe" type="checkbox">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <a class="forgot pull-right" href="#">Forgot Password?</a><br><br>
+        <a href="#">Don't have an accout? <span class="text-primary">Create One</span></a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- partial -->
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'>    
+</script><script  src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
+
