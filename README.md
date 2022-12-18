@@ -16,4 +16,9 @@ python manage.py runserver
 
 ```
 
+Command to create superuser
+```
+python manage.py createsuperuser
+```
+
 
