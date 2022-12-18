@@ -15,8 +15,8 @@ def loginUser(request):
             return render(request, 'index.html')    
         else:
             messages.warning(request, 'Invalid login credentials')
-    else:
-        return render(request, 'Accounts/loginUser.html')
+            return render(request, 'Accounts/loginUser.html')
+    return render(request, 'Accounts/loginUser.html')
 
 
 @csrf_exempt

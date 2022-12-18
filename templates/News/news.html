@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEWS</title>
+    <link rel="stylesheet" href="{% static 'css/news.css' %}" />
+  </head>
+  <body>
+    <div class="title">NEWS RELATED TO BAMBOO</div>
+    <div class="container">
+    {% for article in all_articles.articles %}
+    <div class="box" id="0">
+        <div class="heading" id="h0">
+        {{article.title}}
+        </div>
+        <div class="news" id="n0">
+        {{article.summary}}
+        </div>
+        <img src='{{article.media}}' height='100px' width='200px'></img>
+        <a href="javascript:void();" class="readmore-btn">...</a>
+        <a href="" id="a0">Read More</a>
+    </div>  
+    {% endfor %}
+    </div>
+</body>
+<footer>
+  Copyright &copy; 2023
+</footer>
+</html>

@@ -64,8 +64,8 @@
     <nav>
         <ul>
             <li> <a href="#">Home</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="{% url 'displayNews' %}">News</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
             <li><a href="{% url 'blog' %}">Blogs</a></li>
             {% if user.is_authenticated %}
             <li><a href="{% url 'logOut' %}">Log out</a></li>
