@@ -4,7 +4,10 @@ from Blog.models import Post
 
 
 def blog(request):
-    All_posts = Post.objects.all()
-    print(All_posts)
-    return render(request, 'Blogs/Posts.html', context={'All_posts' : All_posts})
+    all_post = Post.objects.all()
+    print(all_post)
+    context = {
+        'all_post' : all_post,
+    }
+    return render(request, 'Blogs\Blog.html', context)
 
